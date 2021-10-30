@@ -1,0 +1,8 @@
+.git/
+.vs/
+bin/
+LinkedList/
+obj/
+LinkedList.csproj/
+LinkedList.sln/
+
