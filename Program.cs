@@ -6,7 +6,11 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Linked List Program");//Displaying Welcome Message
+            Linked linked = new Linked();//object of the linked class
+            linked.Add(56);//this will be added first.
+            linked.Add(30);//this will be added second.
+            linked.Add(70);//this will be added third.
+            linked.Display();//this will display.
         }
     }
 }
