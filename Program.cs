@@ -10,7 +10,7 @@ namespace LinkedList
             linked.Add(56);//this will be added first.
             linked.Add(70);//this will be added third.
             linked.insertBetween(2, 30);//this will add 30 in the 2 position.
-            linked.pop();//this will remove 56 from the linked list.
+            linked.popLast();//this will remove 70 from the linked list.
             linked.Display();//this will display.
 
         }
