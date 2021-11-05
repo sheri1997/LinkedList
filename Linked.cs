@@ -56,7 +56,16 @@ namespace LinkedList
                     Console.WriteLine("Invalid Position");
                 }
             }
-            return head;//the head data is being returned.
+            return head;//the head data is beings returned.
+        }
+        internal Node pop()//Pop Method is written
+        {
+            if(this.head==null)//if there is no element in the linked list.
+            {
+                return null;
+            }
+            this.head = this.head.next;//increment the head position to point to the next node.
+            return this.head;//amd return the head postion.
         }
         internal void Display()//method used to display the linked list.
         {
