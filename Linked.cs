@@ -23,7 +23,7 @@ namespace LinkedList
                 {
                     temp = temp.next;//reiterating it again
                 }
-                temp.next = node;
+                temp.next = node;//change the next of last node to new node.
             }
         }
         internal void Display()//method used to display the linked list.
