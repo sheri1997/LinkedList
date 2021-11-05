@@ -8,8 +8,8 @@ namespace LinkedList
         {
             Linked linked = new Linked();//object of the linked class
             linked.Add(56);//this will be added first.
-            linked.Add(30);//this will be added second.
             linked.Add(70);//this will be added third.
+            linked.insertBetween(2, 30);//this will add 30 in the 2 position.
             linked.Display();//this will display.
         }
     }
