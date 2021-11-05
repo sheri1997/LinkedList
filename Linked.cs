@@ -60,12 +60,31 @@ namespace LinkedList
         }
         internal Node pop()//Pop Method is written
         {
-            if(this.head==null)//if there is no element in the linked list.
+            if (this.head == null)//if there is no element in the linked list.
             {
                 return null;
             }
             this.head = this.head.next;//increment the head position to point to the next node.
             return this.head;//amd return the head postion.
+
+        }
+        internal Node popLast()//method written to remove the last element.
+        {
+            if(head==null)//if there is no element in the linked list.
+            {
+                return null;
+            }
+            if(head.next==null)//if there is only 1 element in the linked list.
+            {
+                return null;
+            }
+            Node newNode = head;
+            while(newNode.next.next!=null)//loop will iterate till it will find the null node.
+            {
+                newNode = newNode.next;//it will assign the tail position to the loop position.
+            }
+            newNode.next = null;//it will assign the tail node position to one node before.
+            return head;
         }
         internal void Display()//method used to display the linked list.
         {
