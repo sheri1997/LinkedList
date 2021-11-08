@@ -86,6 +86,18 @@ namespace LinkedList
             newNode.next = null;//it will assign the tail node position to one node before.
             return head;
         }
+        internal Node Search(int number)
+        {
+            while(this.head!=null)//loop will continue till the tail is found
+            {
+                if(this.head.data==number)//if the number is found in the list.
+                {
+                    return this.head;//return the value of found.
+                }
+                this.head = this.head.next;//pointer set again
+            }
+            return null;//if the value is not found.
+        }
         internal void Display()//method used to display the linked list.
         {
             Node temp = this.head;//inintialize the pointer to head.
