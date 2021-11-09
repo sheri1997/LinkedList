@@ -127,6 +127,53 @@ namespace LinkedList
             }
             previous.next = temp.next;//remove the node from linked list.
         }
+        internal Node sortLinked(Node head,int count)
+        {
+            Node currentPosition = head;
+            Node previousPosition = currentPosition;
+            Node minimumValue = currentPosition;
+            Node minimumPreviousValue = minimumValue;
+            Node sortedListHead = null;
+            Node sortedListTail = sortedListHead;
+            for(int i=0;i<count;i++)
+            {
+                currentPosition = head;
+                minimumValue = currentPosition;
+                minimumPreviousValue = minimumValue;
+            }
+            while(currentPosition!=null)
+            {
+                if(currentPosition.data<minimumValue.data)
+                {
+                    minimumValue = currentPosition;
+                    minimumPreviousValue = previousPosition;
+                }
+                previousPosition = currentPosition;
+                currentPosition = currentPosition.next;
+            }
+            if(minimumValue==head)
+            {
+                head = head.next;
+            }
+            else if(minimumValue.next==null)
+            {
+                minimumPreviousValue.next = null;
+            }
+            else
+            {
+                minimumPreviousValue.next = minimumPreviousValue.next.next;
+            }
+            if(sortedListHead!=null)
+            {
+                sortedListTail.next = minimumValue;
+            }
+            else
+            {
+                sortedListHead = minimumValue;
+                sortedListTail = sortedListHead;
+            }
+            return sortedListHead; ;
+        }
         internal void Display()//method used to display the linked list.
         {
             Node temp = this.head;//inintialize the pointer to head.
