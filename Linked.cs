@@ -98,6 +98,16 @@ namespace LinkedList
             }
             return null;//if the value is not found.
         }
+        public void afterElement(Node previous,int data)
+        {
+            if(previous == null)//if the value entered is 0
+            {
+                Console.WriteLine("Invalid");
+            }
+            Node n1 = new Node(data);//alloction of the new node and initialization of it with the data.
+            n1.next = previous.next;//the next of new node will be previous node.
+            previous.next = n1;//the next of previous node will be new node.
+        }
         internal void Display()//method used to display the linked list.
         {
             Node temp = this.head;//inintialize the pointer to head.
