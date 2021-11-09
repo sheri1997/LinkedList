@@ -108,6 +108,25 @@ namespace LinkedList
             n1.next = previous.next;//the next of new node will be previous node.
             previous.next = n1;//the next of previous node will be new node.
         }
+        public void deleteNode(int value)
+        {
+            Node temp = head, previous = null;//this will store the value of head node.
+            if(temp!=null && temp.data==value)//if head is holding the value to be deleted
+            {
+                head = temp.next;//head will become the next node value.
+                return;
+            }
+            while(temp!=null&&temp.data!=value)//if the linked list is not empty and head is not equal to the value
+            {
+                previous = temp;//searching for the value and keep track of the previous node
+                temp = temp.next;//previou node will become the temp.next.
+            }
+            if(temp==null)//if the value is not present in the linked list.
+            {
+                return;
+            }
+            previous.next = temp.next;//remove the node from linked list.
+        }
         internal void Display()//method used to display the linked list.
         {
             Node temp = this.head;//inintialize the pointer to head.

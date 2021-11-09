@@ -12,6 +12,7 @@ namespace LinkedList
             linked.insertBetween(2, 30);//this will add 30 in the 2 position.
             //linked.popLast();//this will remove 70 from the linked list.
             linked.afterElement(linked.head.next, 40);//this will add 40 after 30.
+            linked.deleteNode(40);//this will delete 40 from the linked list.
             linked.Display();//this will display.
             //if(linked.Search(27)!=null)//if the value is found
             //{
